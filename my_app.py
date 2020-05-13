@@ -34,25 +34,25 @@ class MusicApp(App):
     def build(self):
         return self.all_window
 
-    def press_chart(self, instance):
+    def press_chart(self, instance):  # at the moment it is finished
         self.main_menu.clear_widgets()
         self.main_menu.add_widget(self.chart_menu)
 
-    def press_add_music(self, instance):
+    def press_add_music(self, instance):  # at the moment it is finished
         self.main_menu.clear_widgets()
         self.main_menu.add_widget(self.add_music_menu)
 
-    def press_profile(self, instance):
+    def press_profile(self, instance):  # at the moment it is finished
         self.main_menu.clear_widgets()
         self.main_menu.add_widget(self.profile_menu)
 
-    def make_profile_menu(self):
+    def make_profile_menu(self):  # a lot of work
         self.profile_menu.add_widget(Button(text='profile', size_hint=[1, 1]))
 
-    def make_add_music_menu(self):
+    def make_add_music_menu(self):  # a lot of work
         self.add_music_menu.add_widget(Button(text='add music', size_hint=[1, 1]))
 
-    def make_chart_menu(self):
+    def make_chart_menu(self):  # a lot of work
         self.chart_menu.add_widget(Button(text='chart', size_hint=[1, 1]))
 
 
