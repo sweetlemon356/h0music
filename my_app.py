@@ -3,10 +3,12 @@ from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 from kivy.core.window import Window
 from kivy.uix.label import Label
+from kivy.core.audio import SoundLoader
 
 
 class MusicApp(App):
     def __init__(self, **kwargs):
+
         super().__init__(**kwargs)
         self.window_x = Window.size[0]
         self.window_y = Window.size[1]
@@ -54,6 +56,16 @@ class MusicApp(App):
 
     def make_chart_menu(self):  # a lot of work
         self.chart_menu.add_widget(Button(text='chart', size_hint=[1, 1]))
+
+
+class Musics:
+    def __init__(self, name, author, track):
+        self.name = name
+        self.author = author
+        self.track = track
+
+    def play_music(self):
+        self.author.play()
 
 
 if __name__ == '__main__':
